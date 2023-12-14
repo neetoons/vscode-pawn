@@ -107,72 +107,72 @@
     "OnNPCModeInit": {
         "prefix": "OnNPCModeInit",
         "description": "Gets called when a NPC script is loaded.",
-        "body": "OnNPCModeInit()$0"
+        "body": "OnNPCModeInit()\n{\n\n}$0"
     },
     "OnNPCModeExit": {
         "prefix": "OnNPCModeExit",
         "description": "Gets called when a NPC-script unloaded.",
-        "body": "OnNPCModeExit()$0"
+        "body": "OnNPCModeExit()\n{\n\n}$0"
     },
     "OnNPCConnect": {
         "prefix": "OnNPCConnect",
         "description": "Gets called when a NPC successfully connects to the server.",
-        "body": "OnNPCConnect(${1:myplayerid})$0"
+        "body": "OnNPCConnect(${1:myplayerid})\n{\n\n}$0"
     },
     "OnNPCDisconnect": {
         "prefix": "OnNPCDisconnect",
         "description": "Gets called when the NPC gets disconnected from the server.",
-        "body": "OnNPCDisconnect(${1:reason[]})$0"
+        "body": "OnNPCDisconnect(${1:reason[]})\n{\n\n}$0"
     },
     "OnNPCSpawn": {
         "prefix": "OnNPCSpawn",
         "description": "Gets called when a NPC spawned.",
-        "body": "OnNPCSpawn()$0"
+        "body": "OnNPCSpawn()\n{\n\n}$0"
     },
     "OnNPCEnterVehicle": {
         "prefix": "OnNPCEnterVehicle",
         "description": "Gets called when a NPC enters a vehicle.",
-        "body": "OnNPCEnterVehicle(${1:vehicleid}, ${2:seatid})$0"
+        "body": "OnNPCEnterVehicle(${1:vehicleid}, ${2:seatid})\n{\n\n}$0"
     },
     "OnNPCExitVehicle": {
         "prefix": "OnNPCExitVehicle",
         "description": "Gets called when a NPC leaves a vehicle.",
-        "body": "OnNPCExitVehicle()$0"
+        "body": "OnNPCExitVehicle()\n{\n\n}$0"
     },
     "OnClientMessage": {
         "prefix": "OnClientMessage",
         "description": "This callback gets called whenever the NPC sees a ClientMessage. This will be everytime a SendClientMessageToAll function is used and everytime a SendClientMessage function is sent towards the NPC. This callback won't be called when someone says something.",
-        "body": "OnClientMessage(${1:color}, ${2:text[]})$0"
+        "body": "OnClientMessage(${1:color}, ${2:text[]})\n{\n\n}$0"
     },
     "OnPlayerText": {
         "prefix": "OnPlayerText",
         "description": "Called when a player sends a chat message.",
-        "body": "OnPlayerText(${1:playerid}, ${2:text[]})$0"
+        "body": "OnPlayerText(${1:playerid}, ${2:text[]})\n{\n\n}\n{\n\n}$0"
     },
     "OnPlayerStreamIn": {
         "prefix": "OnPlayerStreamIn",
         "description": "This callback is called when a player is streamed by some other player's client.",
-        "body": "OnPlayerStreamIn(${1:playerid})$0"
+        "body": "OnPlayerStreamIn(${1:playerid})\n{\n\n}\n{\n\n}$0"
     },
     "OnPlayerStreamOut": {
         "prefix": "OnPlayerStreamOut",
         "description": "This callback is called when a player is streamed out from some other player's client.",
-        "body": "OnPlayerStreamOut(${1:playerid})$0"
+        "body": "OnPlayerStreamOut(${1:playerid})\n{\n\n}\n{\n\n}$0"
     },
     "OnVehicleStreamIn": {
         "prefix": "OnVehicleStreamIn",
         "description": "Called when a vehicle is streamed to a player's client.",
-        "body": "OnVehicleStreamIn(${1:vehicleid})$0"
+        "body": "OnVehicleStreamIn(${1:vehicleid})\n{\n\n}\n{\n\n}$0"
     },
     "OnVehicleStreamOut": {
         "prefix": "OnVehicleStreamOut",
         "description": "This callback is called when a vehicle is streamed out for a player's client (it's so far away that they can't see it).",
-        "body": "OnVehicleStreamOut(${1:vehicleid})$0"
+        "body": "OnVehicleStreamOut(${1:vehicleid})\n{\n\n}\n{\n\n}$0"
     },
     "OnRecordingPlaybackEnd": {
         "prefix": "OnRecordingPlaybackEnd",
         "description": "This callback is called when a recorded file being reproduced with StartRecordingPlayback has reached to its end.",
-        "body": "OnRecordingPlaybackEnd()$0"
+        "body": "OnRecordingPlaybackEnd()\n{\n\n}\n{\n\n}$0"
     },
     "CreateObject": {
         "prefix": "CreateObject",
@@ -1165,9 +1165,9 @@
         "body": "format(${1:output[]}, ${2:len}, ${3:const format[]}, ${4:...})$0"
     },
     "SendClientMessage": {
-        "prefix": "SendClientMessage",
+        "prefix": "scm",
         "description": "This function sends a message to a specific player with a chosen color in the chat. The whole line in the chatbox will be in the set color unless color embedding is used (0.3c or later).",
-        "body": "SendClientMessage(${1:playerid}, ${2:color}, ${3:const message[]})$0"
+        "body": "SendClientMessage(playerid, -1, \"${1}\")$0"
     },
     "SendClientMessageToAll": {
         "prefix": "SendClientMessageToAll",
@@ -1877,267 +1877,267 @@
     "OnGameModeInit": {
         "prefix": "OnGameModeInit",
         "description": "This callback is triggered when the gamemode starts.",
-        "body": "OnGameModeInit()$0"
+        "body": "OnGameModeInit()\n{\n\n}$0"
     },
     "OnGameModeExit": {
         "prefix": "OnGameModeExit",
         "description": "This callback is called when a gamemode ends, either through 'gmx', the server being shut down, or GameModeExit.",
-        "body": "OnGameModeExit()$0"
+        "body": "OnGameModeExit()\n{\n\n}$0"
     },
     "OnFilterScriptInit": {
         "prefix": "OnFilterScriptInit",
         "description": "This callback is called when a filterscript is initialized (loaded). It is only called inside the filterscript which is starting.",
-        "body": "OnFilterScriptInit()$0"
+        "body": "OnFilterScriptInit()\n{\n\n}$0"
     },
     "OnFilterScriptExit": {
         "prefix": "OnFilterScriptExit",
         "description": "This callback is called when a filterscript is unloaded. It is only called inside the filterscript which is unloaded.",
-        "body": "OnFilterScriptExit()$0"
+        "body": "OnFilterScriptExit()\n{\n\n}$0"
     },
     "OnPlayerConnect": {
         "prefix": "OnPlayerConnect",
         "description": "This callback is called when a player connects to the server.",
-        "body": "OnPlayerConnect(${1:playerid})$0"
+        "body": "OnPlayerConnect(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerDisconnect": {
         "prefix": "OnPlayerDisconnect",
         "description": "This callback is called when a player disconnects from the server.",
-        "body": "OnPlayerDisconnect(${1:playerid}, ${2:reason})$0"
+        "body": "OnPlayerDisconnect(${1:playerid}, ${2:reason})\n{\n\n}$0"
     },
     "OnPlayerSpawn": {
         "prefix": "OnPlayerSpawn",
         "description": "This callback is called when a player spawns.(i.e. after caling SpawnPlayer function)",
-        "body": "OnPlayerSpawn(${1:playerid})$0"
+        "body": "OnPlayerSpawn(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerDeath": {
         "prefix": "OnPlayerDeath",
         "description": "This callback is called when a player dies, either by suicide or by being killed by another player.",
-        "body": "OnPlayerDeath(${1:playerid}, ${2:killerid}, ${3:reason})$0"
+        "body": "OnPlayerDeath(${1:playerid}, ${2:killerid}, ${3:reason})\n{\n\n}$0"
     },
     "OnVehicleSpawn": {
         "prefix": "OnVehicleSpawn",
         "description": "This callback is called when a vehicle respawns.",
-        "body": "OnVehicleSpawn(${1:vehicleid})$0"
+        "body": "OnVehicleSpawn(${1:vehicleid})\n{\n\n}$0"
     },
     "OnVehicleDeath": {
         "prefix": "OnVehicleDeath",
         "description": "This callback is called when a vehicle is destroyed - either by exploding or becoming submerged in water.",
-        "body": "OnVehicleDeath(${1:vehicleid}, ${2:killerid})$0"
+        "body": "OnVehicleDeath(${1:vehicleid}, ${2:killerid})\n{\n\n}$0"
     },
     "OnPlayerCommandText": {
         "prefix": "OnPlayerCommandText",
         "description": "This callback is called when a player enters a command into the client chat window. Commands are anything that start with a forward slash, e.g. /help.",
-        "body": "OnPlayerCommandText(${1:playerid}, ${2:cmdtext[]})$0"
+        "body": "OnPlayerCommandText(${1:playerid}, ${2:cmdtext[]})\n{\n\n}$0"
     },
     "OnPlayerRequestClass": {
         "prefix": "OnPlayerRequestClass",
         "description": "Called when a player changes class at class selection (and when class selection first appears).",
-        "body": "OnPlayerRequestClass(${1:playerid}, ${2:classid})$0"
+        "body": "OnPlayerRequestClass(${1:playerid}, ${2:classid})\n{\n\n}$0"
     },
     "OnPlayerEnterVehicle": {
         "prefix": "OnPlayerEnterVehicle",
         "description": "This callback is called when a player starts to enter a vehicle, meaning the player is not in vehicle yet at the time this callback is called.",
-        "body": "OnPlayerEnterVehicle(${1:playerid}, ${2:vehicleid}, ${3:ispassenger})$0"
+        "body": "OnPlayerEnterVehicle(${1:playerid}, ${2:vehicleid}, ${3:ispassenger})\n{\n\n}$0"
     },
     "OnPlayerExitVehicle": {
         "prefix": "OnPlayerExitVehicle",
         "description": "This callback is called when a player starts to exit a vehicle.",
-        "body": "OnPlayerExitVehicle(${1:playerid}, ${2:vehicleid})$0"
+        "body": "OnPlayerExitVehicle(${1:playerid}, ${2:vehicleid})\n{\n\n}$0"
     },
     "OnPlayerStateChange": {
         "prefix": "OnPlayerStateChange",
         "description": "This callback is called when a player changes state. For example, when a player changes from being the driver of a vehicle to being on-foot.",
-        "body": "OnPlayerStateChange(${1:playerid}, ${2:newstate}, ${3:oldstate})$0"
+        "body": "OnPlayerStateChange(${1:playerid}, ${2:newstate}, ${3:oldstate})\n{\n\n}$0"
     },
     "OnPlayerEnterCheckpoint": {
         "prefix": "OnPlayerEnterCheckpoint",
         "description": "This callback is called when a player enters the checkpoint set for that player.",
-        "body": "OnPlayerEnterCheckpoint(${1:playerid})$0"
+        "body": "OnPlayerEnterCheckpoint(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerLeaveCheckpoint": {
         "prefix": "OnPlayerLeaveCheckpoint",
         "description": "This callback is called when a player leaves the checkpoint set for them by SetPlayerCheckpoint. Only one checkpoint can be set at a time.",
-        "body": "OnPlayerLeaveCheckpoint(${1:playerid})$0"
+        "body": "OnPlayerLeaveCheckpoint(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerEnterRaceCheckpoint": {
         "prefix": "OnPlayerEnterRaceCheckpoint",
         "description": "This callback is called when a player enters a race checkpoint.",
-        "body": "OnPlayerEnterRaceCheckpoint(${1:playerid})$0"
+        "body": "OnPlayerEnterRaceCheckpoint(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerLeaveRaceCheckpoint": {
         "prefix": "OnPlayerLeaveRaceCheckpoint",
         "description": "This callback is called when a player leaves the race checkpoint.",
-        "body": "OnPlayerLeaveRaceCheckpoint(${1:playerid})$0"
+        "body": "OnPlayerLeaveRaceCheckpoint(${1:playerid})\n{\n\n}$0"
     },
     "OnRconCommand": {
         "prefix": "OnRconCommand",
         "description": "This callback is called when a command is sent through the server console, remote RCON, or via the in-game '/rcon command'.",
-        "body": "OnRconCommand(${1:cmd[]})$0"
+        "body": "OnRconCommand(${1:cmd[]})\n{\n\n}$0"
     },
     "OnPlayerRequestSpawn": {
         "prefix": "OnPlayerRequestSpawn",
         "description": "Called when a player attempts to spawn via class selection either by pressing SHIFT or clicking the 'Spawn' button.",
-        "body": "OnPlayerRequestSpawn(${1:playerid})$0"
+        "body": "OnPlayerRequestSpawn(${1:playerid})\n{\n\n}$0"
     },
     "OnObjectMoved": {
         "prefix": "OnObjectMoved",
         "description": "This callback is called when an object is moved after MoveObject (when it stops moving).",
-        "body": "OnObjectMoved(${1:objectid})$0"
+        "body": "OnObjectMoved(${1:objectid})\n{\n\n}$0"
     },
     "OnPlayerObjectMoved": {
         "prefix": "OnPlayerObjectMoved",
         "description": "This callback is called when a player object is moved after MovePlayerObject (when it stops moving).",
-        "body": "OnPlayerObjectMoved(${1:playerid}, ${2:objectid})$0"
+        "body": "OnPlayerObjectMoved(${1:playerid}, ${2:objectid})\n{\n\n}$0"
     },
     "OnPlayerPickUpPickup": {
         "prefix": "OnPlayerPickUpPickup",
         "description": "Called when a player picks up a pickup created with CreatePickup.",
-        "body": "OnPlayerPickUpPickup(${1:playerid}, ${2:pickupid})$0"
+        "body": "OnPlayerPickUpPickup(${1:playerid}, ${2:pickupid})\n{\n\n}$0"
     },
     "OnVehicleMod": {
         "prefix": "OnVehicleMod",
         "description": "This callback is called when a vehicle is modded.",
-        "body": "OnVehicleMod(${1:playerid}, ${2:vehicleid}, ${3:componentid})$0"
+        "body": "OnVehicleMod(${1:playerid}, ${2:vehicleid}, ${3:componentid})\n{\n\n}$0"
     },
     "OnEnterExitModShop": {
         "prefix": "OnEnterExitModShop",
         "description": "This callback is called when a player enters or exits a mod shop.",
-        "body": "OnEnterExitModShop(${1:playerid}, ${2:enterexit}, ${3:interiorid})$0"
+        "body": "OnEnterExitModShop(${1:playerid}, ${2:enterexit}, ${3:interiorid})\n{\n\n}$0"
     },
     "OnVehiclePaintjob": {
         "prefix": "OnVehiclePaintjob",
         "description": "Called when a player previews a vehicle paintjob inside a mod shop. Watch out, this callback is not called when the player buys the paintjob.",
-        "body": "OnVehiclePaintjob(${1:playerid}, ${2:vehicleid}, ${3:paintjobid})$0"
+        "body": "OnVehiclePaintjob(${1:playerid}, ${2:vehicleid}, ${3:paintjobid})\n{\n\n}$0"
     },
     "OnVehicleRespray": {
         "prefix": "OnVehicleRespray",
         "description": "This callback is called when a player exits a mod shop, even if the colors weren't changed. Watch out, the name is ambiguous, Pay 'n' Spray shops don't call this callback.",
-        "body": "OnVehicleRespray(${1:playerid}, ${2:vehicleid}, ${3:color1}, ${4:color2})$0"
+        "body": "OnVehicleRespray(${1:playerid}, ${2:vehicleid}, ${3:color1}, ${4:color2})\n{\n\n}$0"
     },
     "OnVehicleDamageStatusUpdate": {
         "prefix": "OnVehicleDamageStatusUpdate",
         "description": "This callback is called when a vehicle element such as doors, tires, panels, or lights change their damage status.",
-        "body": "OnVehicleDamageStatusUpdate(${1:vehicleid}, ${2:playerid})$0"
+        "body": "OnVehicleDamageStatusUpdate(${1:vehicleid}, ${2:playerid})\n{\n\n}$0"
     },
     "OnUnoccupiedVehicleUpdate": {
         "prefix": "OnUnoccupiedVehicleUpdate",
         "description": "This callback is called when a player's client updates/syncs the position of a vehicle they're not driving. This can happen outside of the vehicle or when the player is a passenger of a vehicle that has no driver.",
-        "body": "OnUnoccupiedVehicleUpdate(${1:vehicleid}, ${2:playerid}, ${3:passenger_seat}, ${4:Float:new_x}, ${5:Float:new_y}, ${6:Float:new_z}, ${7:Float:vel_x}, ${8:Float:vel_y}, ${9:Float:vel_z})$0"
+        "body": "OnUnoccupiedVehicleUpdate(${1:vehicleid}, ${2:playerid}, ${3:passenger_seat}, ${4:Float:new_x}, ${5:Float:new_y}, ${6:Float:new_z}, ${7:Float:vel_x}, ${8:Float:vel_y}, ${9:Float:vel_z})\n{\n\n}$0"
     },
     "OnPlayerSelectedMenuRow": {
         "prefix": "OnPlayerSelectedMenuRow",
         "description": "This callback is called when a player selects an item from a menu (ShowMenuForPlayer).",
-        "body": "OnPlayerSelectedMenuRow(${1:playerid}, ${2:row})$0"
+        "body": "OnPlayerSelectedMenuRow(${1:playerid}, ${2:row})\n{\n\n}$0"
     },
     "OnPlayerExitedMenu": {
         "prefix": "OnPlayerExitedMenu",
         "description": "Called when a player exits a menu.",
-        "body": "OnPlayerExitedMenu(${1:playerid})$0"
+        "body": "OnPlayerExitedMenu(${1:playerid})\n{\n\n}$0"
     },
     "OnPlayerInteriorChange": {
         "prefix": "OnPlayerInteriorChange",
         "description": "Called when a player changes interior. Can be triggered by SetPlayerInterior or when a player enter/exits a building.",
-        "body": "OnPlayerInteriorChange(${1:playerid}, ${2:newinteriorid}, ${3:oldinteriorid})$0"
+        "body": "OnPlayerInteriorChange(${1:playerid}, ${2:newinteriorid}, ${3:oldinteriorid})\n{\n\n}$0"
     },
     "OnPlayerKeyStateChange": {
         "prefix": "OnPlayerKeyStateChange",
         "description": "This callback is called when the state of any supported key is changed (pressed/released). Directional keys do not trigger OnPlayerKeyStateChange (up/down/left/right).",
-        "body": "OnPlayerKeyStateChange(${1:playerid}, ${2:newkeys}, ${3:oldkeys})$0"
+        "body": "OnPlayerKeyStateChange(${1:playerid}, ${2:newkeys}, ${3:oldkeys})\n{\n\n}$0"
     },
     "OnRconLoginAttempt": {
         "prefix": "OnRconLoginAttempt",
         "description": "This callback is called when someone attempts to log in to RCON in-game; successful or not.",
-        "body": "OnRconLoginAttempt(${1:ip[]}, ${2:password[]}, ${3:success })$0"
+        "body": "OnRconLoginAttempt(${1:ip[]}, ${2:password[]}, ${3:success })\n{\n\n}$0"
     },
     "OnPlayerUpdate": {
         "prefix": "OnPlayerUpdate",
         "description": "This callback is called every time a client/player updates the server with their status. It is often used to create custom callbacks for client updates that aren't actively tracked by the server, such as health or armor updates or players switching weapons.",
-        "body": "OnPlayerUpdate(${1:playerid})$0"
+        "body": "OnPlayerUpdate(${1:playerid})\n{\n\n}$0"
     },
     "OnActorStreamIn": {
         "prefix": "OnActorStreamIn",
         "description": "This callback is called when an actor is streamed in by a player's client.",
-        "body": "OnActorStreamIn(${1:actorid}, ${2:forplayerid})$0"
+        "body": "OnActorStreamIn(${1:actorid}, ${2:forplayerid})\n{\n\n}$0"
     },
     "OnActorStreamOut": {
         "prefix": "OnActorStreamOut",
         "description": "This callback is called when an actor is streamed out by a player's client.",
-        "body": "OnActorStreamOut(${1:actorid}, ${2:forplayerid})$0"
+        "body": "OnActorStreamOut(${1:actorid}, ${2:forplayerid})\n{\n\n}$0"
     },
     "OnDialogResponse": {
         "prefix": "OnDialogResponse",
         "description": "This callback is called when a player responds to a dialog shown using ShowPlayerDialog by either clicking a button, pressing ENTER/ESC or double-clicking a list item (if using a list style dialog).",
-        "body": "OnDialogResponse(${1:playerid}, ${2:dialogid}, ${3:response}, ${4:listitem}, ${5:inputtext[]})$0"
+        "body": "OnDialogResponse(${1:playerid}, ${2:dialogid}, ${3:response}, ${4:listitem}, ${5:inputtext[]})\n{\n\n}$0"
     },
     "OnPlayerTakeDamage": {
         "prefix": "OnPlayerTakeDamage",
         "description": "This callback is called when a player takes damage.",
-        "body": "OnPlayerTakeDamage(${1:playerid}, ${2:issuerid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})$0"
+        "body": "OnPlayerTakeDamage(${1:playerid}, ${2:issuerid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})\n{\n\n}$0"
     },
     "OnPlayerGiveDamage": {
         "prefix": "OnPlayerGiveDamage",
         "description": "This callback is called when a player gives damage to another player.",
-        "body": "OnPlayerGiveDamage(${1:playerid}, ${2:damagedid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})$0"
+        "body": "OnPlayerGiveDamage(${1:playerid}, ${2:damagedid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})\n{\n\n}$0"
     },
     "OnPlayerGiveDamageActor": {
         "prefix": "OnPlayerGiveDamageActor",
         "description": "This callback is called when a player gives damage to an actor.",
-        "body": "OnPlayerGiveDamageActor(${1:playerid}, ${2:damaged_actorid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})$0"
+        "body": "OnPlayerGiveDamageActor(${1:playerid}, ${2:damaged_actorid}, ${3:Float:amount}, ${4:weaponid}, ${5:bodypart})\n{\n\n}$0"
     },
     "OnPlayerClickMap": {
         "prefix": "OnPlayerClickMap",
         "description": "OnPlayerClickMap is called when a player places a target/waypoint on the pause menu map (by right-clicking).",
-        "body": "OnPlayerClickMap(${1:playerid}, ${2:Float:fX}, ${3:Float:fY}, ${4:Float:fZ})$0"
+        "body": "OnPlayerClickMap(${1:playerid}, ${2:Float:fX}, ${3:Float:fY}, ${4:Float:fZ})\n{\n\n}$0"
     },
     "OnPlayerClickTextDraw": {
         "prefix": "OnPlayerClickTextDraw",
         "description": "This callback is called when a player clicks on a textdraw or cancels the select mode with the Escape key.",
-        "body": "OnPlayerClickTextDraw(${1:playerid}, ${2:Text:clickedid})$0"
+        "body": "OnPlayerClickTextDraw(${1:playerid}, ${2:Text:clickedid})\n{\n\n}$0"
     },
     "OnPlayerClickPlayerTextDraw": {
         "prefix": "OnPlayerClickPlayerTextDraw",
         "description": "This callback is called when a player clicks on a player-textdraw. It is not called when player cancels the select mode (ESC) - however, OnPlayerClickTextDraw is.",
-        "body": "OnPlayerClickPlayerTextDraw(${1:playerid}, ${2:PlayerText:playertextid})$0"
+        "body": "OnPlayerClickPlayerTextDraw(${1:playerid}, ${2:PlayerText:playertextid})\n{\n\n}$0"
     },
     "OnIncomingConnection": {
         "prefix": "OnIncomingConnection",
         "description": "This callback is called when an IP address attempts a connection to the server. To block incoming connections, use BlockIpAddress.",
-        "body": "OnIncomingConnection(${1:playerid}, ${2:ip_address[]}, ${3:port})$0"
+        "body": "OnIncomingConnection(${1:playerid}, ${2:ip_address[]}, ${3:port})\n{\n\n}$0"
     },
     "OnTrailerUpdate": {
         "prefix": "OnTrailerUpdate",
         "description": "This callback is called when a player sent a trailer update.",
-        "body": "OnTrailerUpdate(${1:playerid}, ${2:vehicleid})$0"
+        "body": "OnTrailerUpdate(${1:playerid}, ${2:vehicleid})\n{\n\n}$0"
     },
     "OnVehicleSirenStateChange": {
         "prefix": "OnVehicleSirenStateChange",
         "description": "This callback is called when a vehicle's siren is toggled.",
-        "body": "OnVehicleSirenStateChange(${1:playerid}, ${2:vehicleid}, ${3:newstate})$0"
+        "body": "OnVehicleSirenStateChange(${1:playerid}, ${2:vehicleid}, ${3:newstate})\n{\n\n}$0"
     },
     "OnPlayerClickPlayer": {
         "prefix": "OnPlayerClickPlayer",
         "description": "Called when a player double-clicks on a player on the scoreboard.",
-        "body": "OnPlayerClickPlayer(${1:playerid}, ${2:clickedplayerid}, ${3:source})$0"
+        "body": "OnPlayerClickPlayer(${1:playerid}, ${2:clickedplayerid}, ${3:source})\n{\n\n}$0"
     },
     "OnPlayerEditObject": {
         "prefix": "OnPlayerEditObject",
         "description": "This callback is called when a player finishes editing an object (EditObject/EditPlayerObject).",
-        "body": "OnPlayerEditObject(${1:playerid}, ${2:playerobject}, ${3:objectid}, ${4:response}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ}, ${8:Float:fRotX}, ${9:Float:fRotY}, ${10:Float:fRotZ })$0"
+        "body": "OnPlayerEditObject(${1:playerid}, ${2:playerobject}, ${3:objectid}, ${4:response}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ}, ${8:Float:fRotX}, ${9:Float:fRotY}, ${10:Float:fRotZ })\n{\n\n}$0"
     },
     "OnPlayerEditAttachedObject": {
         "prefix": "OnPlayerEditAttachedObject",
         "description": "This callback is called when a player ends attached object edition mode.",
-        "body": "OnPlayerEditAttachedObject(${1:playerid}, ${2:response}, ${3:index}, ${4:modelid}, ${5:boneid}, ${6:Float:fOffsetX}, ${7:Float:fOffsetY}, ${8:Float:fOffsetZ}, ${9:Float:fRotX}, ${10:Float:fRotY}, ${11:Float:fRotZ}, ${12:Float:fScaleX}, ${13:Float:fScaleY}, ${14:Float:fScaleZ })$0"
+        "body": "OnPlayerEditAttachedObject(${1:playerid}, ${2:response}, ${3:index}, ${4:modelid}, ${5:boneid}, ${6:Float:fOffsetX}, ${7:Float:fOffsetY}, ${8:Float:fOffsetZ}, ${9:Float:fRotX}, ${10:Float:fRotY}, ${11:Float:fRotZ}, ${12:Float:fScaleX}, ${13:Float:fScaleY}, ${14:Float:fScaleZ })\n{\n\n}$0"
     },
     "OnPlayerSelectObject": {
         "prefix": "OnPlayerSelectObject",
         "description": "This callback is called when a player selects an object after SelectObject has been used.",
-        "body": "OnPlayerSelectObject(${1:playerid}, ${2:type}, ${3:objectid}, ${4:modelid}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ})$0"
+        "body": "OnPlayerSelectObject(${1:playerid}, ${2:type}, ${3:objectid}, ${4:modelid}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ})\n{\n\n}$0"
     },
     "OnPlayerWeaponShot": {
         "prefix": "OnPlayerWeaponShot",
         "description": "This callback is called when a player fires a shot from a weapon. Only bullet weapons are supported. Only passenger drive-by is supported (not driver drive-by, and not sea sparrow / hunter shots).",
-        "body": "OnPlayerWeaponShot(${1:playerid}, ${2:weaponid}, ${3:hittype}, ${4:hitid}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ})$0"
+        "body": "OnPlayerWeaponShot(${1:playerid}, ${2:weaponid}, ${3:hittype}, ${4:hitid}, ${5:Float:fX}, ${6:Float:fY}, ${7:Float:fZ})\n{\n\n}$0"
     },
     "db_open": {
         "prefix": "db_open",
@@ -2831,12 +2831,12 @@
     "OnPlayerFinishedDownloading": {
         "prefix": "OnPlayerFinishedDownloading",
         "description": "This callback is called when a player finishes downloading custom models.",
-        "body": "OnPlayerFinishedDownloading(${1:playerid}, ${2:virtualworld})$0"
+        "body": "OnPlayerFinishedDownloading(${1:playerid}, ${2:virtualworld})\n{\n\n}$0"
     },
     "OnPlayerRequestDownload": {
         "prefix": "OnPlayerRequestDownload",
         "description": "This callback is called when a player request for custom model downloads.",
-        "body": "OnPlayerRequestDownload(${1:playerid}, ${2:type}, ${3:crc})$0"
+        "body": "OnPlayerRequestDownload(${1:playerid}, ${2:type}, ${3:crc})\n{\n\n}$0"
     },
     "clamp": {
         "prefix": "clamp",
@@ -2871,12 +2871,12 @@
     "OnPlayerPrivmsg": {
         "prefix": "OnPlayerPrivmsg",
         "description": "This callback is called when a player sends a private message through the native PM system /pm.\nFunction Is Disabled in current version of sa-mp.",
-        "body": "OnPlayerPrivmsg(${1:playerid}, ${2:recieverid}, ${3:text[]})$0"
+        "body": "OnPlayerPrivmsg(${1:playerid}, ${2:recieverid}, ${3:text[]})\n{\n\n}$0"
     },
     "OnPlayerTeamPrivmsg": {
         "prefix": "OnPlayerTeamPrivmsg",
         "description": "This callback is called when a player sends a team private message through the native TPM system (/tpm).\nFunction Is Disabled in current version of sa-mp.",
-        "body": "OnPlayerTeamPrivmsg(${1:playerid}, ${2:text[]})$0"
+        "body": "OnPlayerTeamPrivmsg(${1:playerid}, ${2:text[]})\n{\n\n}$0"
     },
     "SetDisabledWeapons": {
         "prefix": "SetDisabledWeapons",
