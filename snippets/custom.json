@@ -5,7 +5,7 @@
         "description": "Get the global player variable"
     },
     "Create a function": {
-        "prefix": "newfun",
+        "prefix": "newfunc",
         "body": ["forward $1();", "public  $1()", "{", "}"],
         "description": "Create a function"
     }
